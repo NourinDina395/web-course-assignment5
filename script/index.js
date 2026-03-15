@@ -79,11 +79,11 @@ function displayIssues(issues) {
     const prio = issue.priority.toUpperCase();
 
     if (prio === "HIGH") {
-      priorityStyle = "bg-pink-100 text-pink-700 border-pink-600 font-semibold";
+      priorityStyle = "bg-yellow-100 text-yellow-700 border-yellow-300 font-semibold";
     } else if (prio === "MEDIUM") {
       priorityStyle = "bg-yellow-100 text-yellow-700 border-yellow-300 font-semibold";
     } else if (prio === "LOW") {
-      priorityStyle = "bg-gray-100 text-gray-700 border-gray-300 font-semibold";
+      priorityStyle = "bg-yellow-100 text-yellow-700 border-yellow-300 font-semibold";
     } else {
       priorityStyle = "bg-gray-100 text-black-700 border-black-300";
     }
@@ -188,6 +188,9 @@ const footerHTML = `
     grid.innerHTML += cardHTML;
   });
 }
+
+
+// ================== SHOW MODAL ==================
 async function showIssueModal(id) {
   try {
     const res = await fetch(`https://phi-lab-server.vercel.app/api/v1/lab/issue/${id}`);
