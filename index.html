@@ -1,11 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- title and logo  -->
+    <title>GitHub Issue Tracker</title>
+    <link rel="shortcut icon" href="./assets/github-logo.png" type="image/x-icon" />
+
+    <!-- font awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- font integration  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- tailwind+daisyui  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- stylesheet  -->
+    <link rel="stylesheet" href="style/style.css" />
+  
 </head>
-<body>
-     <h1> assignment - 5</h1>
-</body>
+
+ 
+<body class="bg-base-200" >
+
+ <!-- ============= LOGIN PAGE ====================== --> 
+  <section>
+  <div id="login-page" class="min-h-screen flex items-center justify-center">
+    <div class="card bg-base-100 shadow-xl w-96 my-10">
+      <div class="card-body text-center">
+        <div class="flex justify-center mb-4">
+      <div class="flex justify-center mb-6">
+        <img src="./assets/github-logo.png" 
+             alt="GitHub Logo" 
+             class="w-24 h-24 rounded-3xl shadow-inner">
+      </div>
+        </div>
+        <h1 class="text-3xl font-bold">GitHub Issues Tracker</h1>
+        <p class="text-base-content/70">Sign in to manage your issues</p>
+        <div class="space-y-4 mt-8 text-left"> 
+
+          <label for="username" class="text-black-800">Username</label> 
+          <input id="username" type="text" placeholder="Enter Username" class="input input-bordered w-full rounded-lg" />
+           <!-- <span class="text-purple-500 text-xs -mt-1">Default: admin</span> <br> -->
+
+          <label for="username" class="text-black-800">Password</label> 
+           <input id="password" type="password" placeholder="Enter Password" class="input input-bordered w-full rounded-lg" />
+           <!--  <span class="text-purple-500 text-xs -mt-1">Default: admin123</span> <br> -->
+          <br><br>
+          <button onclick="handleLogin()" class="btn btn-primary w-full text-lg">Sign In</button>
+    
+      <div class="text-xs text-base-content/60 mt-6 text-center">
+        <div style="border-top:1px solid gray; text-align:center; line-height:0.1em; margin:10px 0 20px;">
+          <span style="background:#fff; padding:0 10px; color:gray;">OR</span>
+        </div>
+
+         Demo Credentials:<br><br>
+        <span class="font-bold">Username: </span> <span class="font-mono">admin</span> <br>
+        <span class="font-bold">Password: </span> <span class="font-mono">admin123</span>
+       </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+   </section>
+
+
+    <script src="./script/index.js"></script>
+    
+  </body>
 </html>
